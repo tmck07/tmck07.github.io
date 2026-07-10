@@ -1,149 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="icon" href="icon.png" type="image/png" />
+
+  <link rel="icon" href="icon.png" type="image/png">
 
   <!-- Google Fonts -->
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- CSS -->
-<link rel="stylesheet" href="styles.css" />
-  
-  <!--Osano-->
- <script src="https://cmp.osano.com/AzZcpvRm9bbsqngN/19cb2fc3-52d5-478b-9e31-3e9e166d1011/osano.js"></script>
- 
-  <!--jquery-->
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Osano -->
+  <script src="https://cmp.osano.com/AzZcpvRm9bbsqngN/19cb2fc3-52d5-478b-9e31-3e9e166d1011/osano.js"></script>
 </head>
 
-  
-
-<body>
-  <header class="hero">
-    <h1>Hello, I'm TaCianna</h1>
-    <p>Learning Web Developer & Support Engineer – sharing my journey as I challenge myself and learn new things.</p>
-  </header>
-
-  <nav>
-    <a href="index.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <!-- Updated About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm TaCianna McKnight, a passionate support engineer who enjoys solving technical challenges and building user-first experiences. I created this space to document my journey as I deepen my web development skills and explore creative problem-solving through code. I’m excited to share what I’m learning. Explore my interactive projects, design experiments, and fun games as I grow and share my journey in tech. Thanks for stopping by!</p>
-
-</head>
 <body>
 
-  <h1>Testing blocked YouTube iframe</h1>
+<header class="hero">
+  <h1>Hello, I'm TaCianna</h1>
+  <p>Learning Web Developer & Support Engineer – sharing my journey as I challenge myself and learn new things.</p>
+</header>
 
-  <div class="video-wrap" id="video-wrap-1">
-   <iframe width="560" height="315"
-  data-osano="MARKETING"
-  data-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-  title="Test video" frameborder="0" allowfullscreen>
-</iframe>
+<nav>
+  <a href="index.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-<div class="osano-video-placeholder" id="placeholder-1">
-  <p>This video is blocked because you haven't accepted Marketing cookies.</p>
-  <button id="accept-btn-1">Update Cookie Preferences</button>
-</div>
+<section id="about">
+  <h2>About Me</h2>
 
-  <script>
-    // Wait for Osano's blocked event, then reveal the placeholder
-    window.Osano('onInitialized', function () {
-      Osano.cm.addEventListener('osano-cm-iframe-blocked', function (src) {
-        console.log('Osano blocked this iframe:', src);
-        if (src.includes('youtube.com')) {
-          document.getElementById('placeholder-1').style.display = 'flex';
-        }
-      });
-    });
+  <p>
+    I'm TaCianna McKnight, a passionate support engineer who enjoys solving technical
+    challenges and building user-first experiences. I created this space to document my
+    journey as I deepen my web development skills and explore creative problem-solving
+    through code. I'm excited to share what I'm learning. Explore my interactive
+    projects, design experiments, and fun games as I grow and share my journey in tech.
+    Thanks for stopping by!
+  </p>
+</section>
 
-    // Wire the button to reopen the consent drawer
-    document.getElementById('accept-btn-1').addEventListener('click', function () {
-      Osano.cm.showDrawer();
-    });
-  </script>
-  </section>
-  
- <section id="projects" class="project-section">
-  <h2>Featured Projects</h2>
-   <h3>Online Dating Website Form Project</h3>
-  <div class="project-card">
-    <img src="datingsite-thumbnail.png" alt="Dating Website Form Screenshot">
-    <div class="project-info">
-      <h3>Dating Website Form</h3>
-      <p>A modern dating form UI collecting user preferences and lifestyle details. Features interactive fields, colorful layout, and responsive design using pure HTML, CSS, and minimal JS.</p>
-           <a href="https://tmck07.github.io/datingsite/" target="_blank" class="btn">View Live</a>
-      <a href="https://github.com/tmck07/datingsite/" target="_blank" class="btn github">GitHub</a>
+<!-- Video Demo -->
+<section id="video-demo">
+  <h2>Testing Blocked YouTube iframe</h2>
+
+  <div class="video-wrap">
+
+    <iframe
+      width="560"
+      height="315"
+      data-osano="MARKETING"
+      data-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      title="Test Video"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+
+    <div class="osano-video-placeholder" id="placeholder-1">
+      <p>This video is blocked because you haven't accepted Marketing cookies.</p>
+      <button id="accept-btn-1">Update Cookie Preferences</button>
     </div>
+
   </div>
 </section>
 
-  <section id="projects" class="project-section">
-  <h3>Smiley Face Matching Game Project</h3>
+<section id="projects" class="project-section">
+
+  <h2>Featured Projects</h2>
+
   <div class="project-card">
-    <img src="smiley-thumbnail.png" alt="Smiley Face Matching Game Screenshot">
+
+    <img src="datingsite-thumbnail.png" alt="Dating Website Form Screenshot">
+
     <div class="project-info">
-      <h3>Smiley Face Matching Game </h3>
-      <p>A playful smiley face matching game with a clean layout and interactive design. Players identify the extra smiley on the left panel to score points. Built with HTML, CSS, and JavaScript, the game features dynamic positioning, responsive visuals, and smooth animations for an engaging user experience.</p>
-      <a href="https://tmck07.github.io/Smileygame/" target="_blank" class="btn">View Live</a>
-      <a href="https://github.com/tmck07/Smileygame/" target="_blank" class="btn github">GitHub</a>
+
+      <h3>Dating Website Form</h3>
+
+      <p>
+        A modern dating form UI collecting user preferences and lifestyle details.
+        Features interactive fields, colorful layout, and responsive design using
+        pure HTML, CSS, and minimal JavaScript.
+      </p>
+
+      <a href="https://tmck07.github.io/datingsite/" target="_blank" class="btn">
+        View Live
+      </a>
+
+      <a href="https://github.com/tmck07/datingsite/" target="_blank" class="btn github">
+        GitHub
+      </a>
+
     </div>
+
   </div>
-  </section>
 
-  
-  <footer>
-    <p>&copy; 2025 TaCianna's Portfolio Blog</p>
-    <p>
-      <a href="https://github.com/tmck07">GitHub</a> |
-      <a href="https://www.linkedin.com/in/taciannamcknight">LinkedIn</a> |
-      <a href="https://www.taciannamcknight.com">Resume</a> |
-      <a href="#" onclick="Osano.cm.showDrawer('osano-cm-dom-info-dialog-open')">Cookie Preferences</a> |
-      <a href="#" onclick="Osano.cm.showDoNotSell()">Do Not Sell or Share My Personal Information</a> |
-      <a href="https://my.datasubject.com/AzZcpvRm9bbsqngN/48512" target="_blank"> Subject Rights Form</a>
-    </p>
-  </footer>
-  <script>
-  const cards = document.querySelectorAll('.card,.project-card');
+</section>
 
-  const reveal = () => {
-    cards.forEach(card => {
-      const cardTop = card.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
+<section id="game-project" class="project-section">
 
-      if (cardTop < windowHeight - 100) {
-        card.classList.add('visible');
-      } else {
-        card.classList.remove('visible');
-      }
-    });
-  };
+  <div class="project-card">
 
-  window.addEventListener('scroll', reveal);
-  reveal(); // Trigger once on page load
-</script>
+    <img src="smiley-thumbnail.png" alt="Smiley Face Matching Game Screenshot">
+
+    <div class="project-info">
+
+      <h3>Smiley Face Matching Game</h3>
+
+      <p>
+        A playful smiley face matching game with a clean layout and interactive
+        design. Players identify the extra smiley on the left panel to score points.
+        Built with HTML, CSS, and JavaScript featuring dynamic positioning,
+        responsive visuals, and smooth animations.
+      </p>
+
+      <a href="https://tmck07.github.io/Smileygame/" target="_blank" class="btn">
+        View Live
+      </a>
+
+      <a href="https://github.com/tmck07/Smileygame/" target="_blank" class="btn github">
+        GitHub
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>&copy; 2025 TaCianna's Portfolio Blog</p>
+
+  <p>
+    <a href="https://github.com/tmck07">GitHub</a> |
+    <a href="https://www.linkedin.com/in/taciannamcknight">LinkedIn</a> |
+    <a href="https://www.taciannamcknight.com">Resume</a> |
+    <a href="#" onclick="Osano.cm.showDrawer()">Cookie Preferences</a> |
+    <a href="#" onclick="Osano.cm.showDoNotSell()">
+      Do Not Sell or Share My Personal Information
+    </a> |
+    <a href="https://my.datasubject.com/AzZcpvRm9bbsqngN/48512" target="_blank">
+      Subject Rights Form
+    </a>
+  </p>
+
+</footer>
+
 <script>
-  window.Osano('onInitialized', function () {
-    Osano.cm.addEventListener('osano-cm-iframe-blocked', function (src) {
-      console.log('Osano blocked this iframe:', src);
-      if (src.includes('youtube.com')) {
-        document.getElementById('placeholder-1').style.display = 'flex';
-      }
-    });
-  });
+window.Osano('onInitialized', function () {
 
-  document.getElementById('accept-btn-1').addEventListener('click', function () {
+    Osano.cm.addEventListener('osano-cm-iframe-blocked', function (src) {
+
+        console.log('Osano blocked:', src);
+
+        if (src.includes('youtube.com')) {
+            document.getElementById('placeholder-1').style.display = 'flex';
+        }
+
+    });
+
+});
+
+document.getElementById('accept-btn-1').addEventListener('click', function () {
     Osano.cm.showDrawer();
-  });
+});
 </script>
+
+<script>
+const cards = document.querySelectorAll('.card, .project-card');
+
+function reveal() {
+
+    cards.forEach(card => {
+
+        const top = card.getBoundingClientRect().top;
+
+        if (top < window.innerHeight - 100) {
+            card.classList.add('visible');
+        } else {
+            card.classList.remove('visible');
+        }
+
+    });
+
+}
+
+window.addEventListener('scroll', reveal);
+reveal();
+</script>
+
 </body>
 </html>
-
