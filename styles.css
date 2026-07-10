@@ -276,3 +276,28 @@ body.sticky-header .hero h1 {
 .btn.github:hover {
   background-color: #555;
 }
+    .video-wrap {
+      position: relative;
+      width: 560px;
+      max-width: 100%;
+    }
+    .osano-video-placeholder {
+      display: none; /* shown only via JS when blocked */
+      width: 560px;
+      height: 315px;
+      background: #f1f3f6;
+      border: 1px solid #d2d3d6;
+      border-radius: 4px;
+      color: #3e3e42;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-family: sans-serif;
+      padding: 16px;
+    }
+    .osano-video-placeholder button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
