@@ -19,6 +19,8 @@
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
+  
+
 <body>
   <header class="hero">
     <h1>Hello, I'm TaCianna</h1>
@@ -128,18 +130,20 @@
   window.addEventListener('scroll', reveal);
   reveal(); // Trigger once on page load
 </script>
- <!-- <script>
-  $(function(){
-    $(window).scroll(function(){
-      var winTop = $(window).scrollTop();
-      if(winTop >= 30){
-        $("body").addClass("sticky-header");
-      } else {
-        $("body").removeClass("sticky-header");
+<script>
+  window.Osano('onInitialized', function () {
+    Osano.cm.addEventListener('osano-cm-iframe-blocked', function (src) {
+      console.log('Osano blocked this iframe:', src);
+      if (src.includes('youtube.com')) {
+        document.getElementById('placeholder-1').style.display = 'flex';
       }
     });
   });
-  </script> -->
+
+  document.getElementById('accept-btn-1').addEventListener('click', function () {
+    Osano.cm.showDrawer();
+  });
+</script>
 </body>
 </html>
 
