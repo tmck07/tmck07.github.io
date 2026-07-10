@@ -34,12 +34,67 @@
   <section id="about">
     <h2>About Me</h2>
     <p>I'm TaCianna McKnight, a passionate support engineer who enjoys solving technical challenges and building user-first experiences. I created this space to document my journey as I deepen my web development skills and explore creative problem-solving through code. I’m excited to share what I’m learning. Explore my interactive projects, design experiments, and fun games as I grow and share my journey in tech. Thanks for stopping by!</p>
-    
-  <iframe width="560" height="315"
-  data-osano="MARKETING"
-  data-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-  title="Test video" frameborder="0" allowfullscreen>
-</iframe>
+<style>
+    .video-wrap {
+      position: relative;
+      width: 560px;
+      max-width: 100%;
+    }
+    .osano-video-placeholder {
+      display: none; /* shown only via JS when blocked */
+      width: 560px;
+      height: 315px;
+      background: #f1f3f6;
+      border: 1px solid #d2d3d6;
+      border-radius: 4px;
+      color: #3e3e42;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      font-family: sans-serif;
+      padding: 16px;
+    }
+    .osano-video-placeholder button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Testing blocked YouTube iframe</h1>
+
+  <div class="video-wrap" id="video-wrap-1">
+    <iframe width="560" height="315"
+      data-osano="MARKETING"
+      data-src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      title="Test video" frameborder="0" allowfullscreen>
+    </iframe>
+
+    <div class="osano-video-placeholder" id="placeholder-1">
+      <p>This video is blocked because you haven't accepted Marketing cookies.</p>
+      <button id="accept-btn-1">Update Cookie Preferences</button>
+    </div>
+  </div>
+
+  <script>
+    // Wait for Osano's blocked event, then reveal the placeholder
+    window.Osano('onInitialized', function () {
+      Osano.cm.addEventListener('osano-cm-iframe-blocked', function (src) {
+        console.log('Osano blocked this iframe:', src);
+        if (src.includes('youtube.com')) {
+          document.getElementById('placeholder-1').style.display = 'flex';
+        }
+      });
+    });
+
+    // Wire the button to reopen the consent drawer
+    document.getElementById('accept-btn-1').addEventListener('click', function () {
+      Osano.cm.showDrawer();
+    });
+  </script>
   </section>
   
  <section id="projects" class="project-section">
